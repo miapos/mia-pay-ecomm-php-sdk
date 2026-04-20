@@ -29,7 +29,8 @@ try {
         'clientEmail' => 'test@test.com',
         'callbackUrl' => 'http://your_callback_url',
         'successUrl' => 'http://your_success_url?orderId=order12345',
-        'failUrl' => 'http://your_failUrl_url?orderId=order12345'
+        'failUrl' => 'http://your_failUrl_url?orderId=order12345',
+        'directRedirect' => false // Optional. QR only. If true, mobile users are automatically redirected to the banking app.
     ];
 
     // Create the payment
