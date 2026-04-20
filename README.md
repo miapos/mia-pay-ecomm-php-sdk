@@ -89,6 +89,7 @@ $paymentData = [
     'callbackUrl' => 'http://your_callback_url',
     'successUrl' => 'http://your_success_url',
     'failUrl' => 'http://your_fail_url',
+    'directRedirect' => false, // Optional. QR only. If true, mobile users are automatically redirected to the banking app.
 ];
 
 $response = $sdk->createPayment($paymentData);
@@ -99,6 +100,8 @@ $checkoutPage = $response['checkoutPage'];
 // Save $paymentId in your database and redirect the client to $checkoutPage
 header("Location: $checkoutPage");
 ```
+
+> **`directRedirect`** *(optional, boolean, default: `false`, QR only)*: When set to `true`, the checkout page will automatically redirect mobile users to the banking app without requiring a manual button tap. The page continues polling payment status in the background and redirects to `successUrl`/`failUrl` upon completion.
 
 ---
 
