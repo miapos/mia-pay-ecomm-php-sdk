@@ -1,9 +1,9 @@
 {
-  "name": "finergy/mia-pos-sdk",
+  "name": "miapos/mia-pos-sdk",
   "description": "PHP SDK for Mia POS ecommerce API",
   "type": "library",
   "license": "MIT",
-  "homepage": "https://github.com/finergy-tech/mia-pay-ecomm-php-sdk.git",
+  "homepage": "https://github.com/miapos/mia-pay-ecomm-php-sdk",
   "keywords": ["mia-pos", "ecommerce", "payments", "api", "sdk", "php"],
   "authors": [
     {
