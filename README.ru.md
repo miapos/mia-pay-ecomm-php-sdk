@@ -90,6 +90,7 @@ $paymentData = [
     'callbackUrl' => 'http://ваш_callback_url',
     'successUrl' => 'http://ваш_success_url',
     'failUrl' => 'http://ваш_fail_url',
+    'directRedirect' => false, // Опционально. Только QR. Если true, мобильные пользователи автоматически перенаправляются в банковское приложение.
 ];
 
 $response = $sdk->createPayment($paymentData);
@@ -100,6 +101,8 @@ $checkoutPage = $response['checkoutPage'];
 // Сохраните $paymentId в вашей базе данных и перенаправьте клиента на $checkoutPage
 header("Location: $checkoutPage");
 ```
+
+> **`directRedirect`** *(опционально, boolean, по умолчанию: `false`, только QR)*: Если установлено `true`, страница оплаты автоматически перенаправит мобильных пользователей в банковское приложение, без необходимости нажимать кнопку вручную. Страница продолжает отслеживать статус платежа в фоне и перенаправляет на `successUrl`/`failUrl` по завершении.
 
 ---
 

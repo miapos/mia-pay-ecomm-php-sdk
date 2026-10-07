@@ -90,6 +90,7 @@ $paymentData = [
     'callbackUrl' => 'http://callback_url_dvs',
     'successUrl' => 'http://success_url_dvs',
     'failUrl' => 'http://fail_url_dvs',
+    'directRedirect' => false, // Opțional. Doar QR. Dacă true, utilizatorii mobili sunt redirecționați automat către aplicația bancară.
 ];
 
 $response = $sdk->createPayment($paymentData);
@@ -100,6 +101,8 @@ $checkoutPage = $response['checkoutPage'];
 // Salvați $paymentId în baza de date și redirecționați clientul la $checkoutPage
 header("Location: $checkoutPage");
 ```
+
+> **`directRedirect`** *(opțional, boolean, implicit: `false`, doar QR)*: Când este setat la `true`, pagina de checkout redirecționează automat utilizatorii mobili către aplicația bancară, fără a fi necesară apăsarea manuală a unui buton. Pagina continuă să verifice statusul plății în fundal și redirecționează către `successUrl`/`failUrl` la finalizare.
 
 ---
 
