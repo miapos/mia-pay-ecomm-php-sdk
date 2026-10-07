@@ -22,7 +22,7 @@ Ensure that these extensions are enabled in your PHP configuration (`php.ini`).
 
 1. Run the following command to add the SDK to your project:
    ```bash
-   composer require finergy/mia-pos-sdk
+   composer require miapos/mia-pos-sdk
    ```
 
 2. Include the Composer autoloader in your project:

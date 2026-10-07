@@ -23,7 +23,7 @@ MIA POS, предоставляемая Finergy Tech, позволяет без�
 
 1. Выполните следующую команду, чтобы добавить SDK в ваш проект:
    ```bash
-   composer require finergy/mia-pos-sdk
+   composer require miapos/mia-pos-sdk
    ```
 
 2. Подключите autoloader Composer в вашем проекте:
